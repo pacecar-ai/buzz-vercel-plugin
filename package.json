@@ -1,0 +1,14 @@
+{
+  "name": "@pacecar-ai/buzz-vercel-plugin",
+  "version": "1.0.0",
+  "description": "The Vercel hosted-agent companion for Buzz Desktop",
+  "type": "module",
+  "license": "MIT",
+  "repository": { "type": "git", "url": "git+https://github.com/pacecar-ai/buzz-vercel-plugin.git" },
+  "engines": { "node": ">=22" },
+  "bin": { "buzz-vercel-plugin": "./bin/build.mjs" },
+  "exports": { ".": "./src/build.mjs", "./callback-source": "./src/callback.cjs" },
+  "files": ["bin", "src", "LICENSE", "README.md"],
+  "scripts": { "build": "node bin/build.mjs", "test": "node --test test/*.test.mjs" },
+  "dependencies": { "esbuild": "0.28.2" }
+}
